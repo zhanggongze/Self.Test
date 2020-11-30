@@ -1,0 +1,165 @@
+/*比值为1:20       1rem = 20px*/
+@charset "utf-8";
+
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+li,
+input,
+textarea,
+button {
+  margin    : 0;
+  padding   : 0;
+  word-break: break-all;
+}
+
+body {
+  text-align              : left;
+  font-family             : '苹方', Helvetica, '微软雅黑', Arial, sans-serif;
+  font-size-adjust        : none;
+  -webkit-text-size-adjust: none;
+  color                   : #454545;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color          : #666;
+}
+
+em,
+var {
+  font-style: normal;
+}
+
+
+body {
+  background-color: #F2F2F2;
+  overflow-x      : hidden;
+}
+
+html {
+  font-size: 107%;
+}
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 107% !important;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  html {
+    font-size: 120% !important;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 125% !important;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 138% !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 160% !important;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  html {
+    font-size: 180% !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 213%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 240%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*  全局隐藏CLASS */
+.hide {
+  display: none;
+}
+
+.clearfix:after {
+  clear     : both;
+  height    : 0;
+  overflow  : hidden;
+  display   : block;
+  visibility: hidden;
+  content   : ".";
+}
+
+/* 动画 */
+.animate__animated {
+  -webkit-animation-duration : 1s;
+  animation-duration         : 1s;
+  -webkit-animation-duration : var(--animate-duration);
+  animation-duration         : var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode        : both
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 100%
+  }
+
+  to {
+    top: 0
+  }
+}
+
+.animate__top {
+  animation: fadeIn 0.2s ease;
+}
+
+canvas{
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.loading{
+  text-align: center;
+  padding: 0.75rem;
+}

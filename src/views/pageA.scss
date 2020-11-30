@@ -1,0 +1,249 @@
+.App {
+  background-color: #f5f5f5;
+  width           : 100%;
+  height          : 100%;
+  position        : fixed;
+
+  .leadPage {
+    width            : 100%;
+    height           : 100%;
+    position         : fixed;
+    top              : 0;
+    bottom           : 0;
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+    ;
+    display        : flex;
+    justify-content: center;
+
+    .start-btn {
+      width           : 75%;
+      height          : 2.45rem;
+      margin          : 0 auto;
+      line-height     : 2.45rem;
+      text-align      : center;
+      border-radius   : 24px;
+      background-color: #fff;
+      position        : absolute;
+      bottom          : 1.25rem;
+      color           : #666;
+      box-shadow   : 2px 2px 8px 0 rgba(0, 0, 0, 0.15);
+
+
+      &:active {
+        background-color: rgb(230, 230, 230);
+      }
+    }
+  }
+
+  .project {
+    width           : 100%;
+    height          : 100%;
+    position        : fixed;
+    top             : 100%;
+    bottom          : 0;
+    background-color: #fff;
+    padding         : 1.25rem;
+    box-sizing      : border-box;
+
+    .tip {
+      text-align: right;
+
+      b {
+        font-size: 1.5rem;
+      }
+    }
+
+    .pName {
+      padding-bottom: 1.25rem;
+      font-size     : 1.25rem;
+    }
+
+    .radio {
+      label {
+        padding-bottom: 0.6rem;
+        display       : block;
+        padding-left  : 6px;
+
+        input {
+          -webkit-appearance: auto;
+        }
+      }
+    }
+
+
+    .btncontent {
+      width          : 100%;
+      display        : flex;
+      justify-content: center;
+    }
+
+    .btn {
+      width        : 60%;
+      height       : 2.45rem;
+      margin       : 0 auto;
+      line-height  : 2.45rem;
+      text-align   : center;
+      border-radius: 24px;
+      background   : linear-gradient(-45deg, rgba(82, 204, 234, 1), rgba(69, 187, 192, 1));
+      box-shadow   : 2px 2px 8px 0 rgba(26, 161, 156, 0.35);
+      position     : absolute;
+      bottom       : 1.25rem;
+      color        : #fff;
+
+      &:active {
+        background: linear-gradient(-45deg, rgb(73, 182, 209), rgb(57, 156, 160));
+        box-shadow: 2px 2px 8px 0 rgba(26, 161, 156, 0.45);
+
+      }
+    }
+  }
+
+  .result {
+    width                 : 100%;
+    height                : 100%;
+    position              : fixed;
+    // top                : 0;
+    top                   : 100%;
+    bottom                : 0;
+    background-color      : #fff;
+    padding               : 1.25rem;
+    box-sizing            : border-box;
+    background-repeat     : no-repeat;
+    background-size       : 100%;
+
+    .content {
+      padding: 1.25rem;
+
+      p {
+        color      : #666;
+        line-height: 1.5;
+      }
+
+      p:nth-child(1) {
+        padding-top: 1.85rem;
+        text-align : center;
+        font-size  : 1.75rem;
+        color      : #FF9600;
+      }
+
+      p:nth-child(2) {
+        text-align    : center;
+        font-size     : 0.75rem;
+        padding-bottom: 1.25rem;
+      }
+
+      p:last-child {
+        padding-top: 1.25rem;
+        line-height: 1.5;
+        font-size  : 1rem;
+        color      : #FF9600;
+      }
+
+    }
+
+    .saveImg {
+      position       : absolute;
+      bottom         : 0.875rem;
+      display        : flex;
+      justify-content: center;
+      left           : 0;
+      right          : 0;
+
+      a {
+        font-size: 0.75rem;
+        text-decoration: underline;
+      }
+    }
+
+    .active {
+      width          : 100%;
+      display        : flex;
+      justify-content: center;
+      position       : absolute;
+      bottom         : 2.5rem;
+      left           : 0;
+      right          : 0;
+
+      .btn {
+        width        : 80%;
+        background   : linear-gradient(-45deg, rgba(82, 204, 234, 1), rgba(69, 187, 192, 1));
+        box-shadow   : 3px 4px 16px 0 rgba(26, 161, 156, 0.35);
+        border-radius: 1.25rem;
+        text-align   : center;
+        line-height  : 2.8;
+        color        : #fff;
+        font-size    : 0.9rem;
+      }
+    }
+
+  }
+
+  .share {
+    width                 : 100%;
+    height                : 100%;
+    position              : fixed;
+    // top                : 0;
+    top                   : 100%;
+    bottom                : 0;
+    background-color      : #fff;
+    padding               : 1.25rem;
+    box-sizing            : border-box;
+    background-repeat     : no-repeat;
+    background-size       : 100% 100%;
+
+    .p1 {
+      color      : #fff;
+      font-weight: bold;
+      text-align : center;
+      font-size  : 1.25rem;
+    }
+
+    .content {
+      padding    : 1.25rem;
+      padding-top: 1.25rem;
+
+      p {
+        color      : #666;
+        line-height: 1.5;
+      }
+
+      p:nth-child(1) {
+        padding-top: 1.85rem;
+        text-align : center;
+        font-size  : 1.75rem;
+        color      : #FF9600;
+      }
+
+      p:nth-child(2) {
+        text-align    : center;
+        font-size     : 0.75rem;
+        padding-bottom: 1.25rem;
+      }
+
+      p:last-child {
+        padding-top: 1.25rem;
+        line-height: 1.5;
+        font-size  : 1rem;
+        color      : #FF9600;
+      }
+
+    }
+
+    .qrcode {
+      width            : 4rem;
+      height           : 4rem;
+      position         : absolute;
+      bottom           : 0.625rem;
+      left             : 2.5rem;
+      background-repeat: no-repeat;
+      background-size  : 100% 100%;
+      ;
+    }
+  }
+
+  .starttop {
+    top: 0;
+  }
+
+}

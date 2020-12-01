@@ -14,13 +14,13 @@ const environment = {
 
 //预发布环境
 // const environment = {
-//     FILEBASEURL: "https://pre-public-1300222288.cos.ap-chengdu.myqcloud.com/"+configtUrl
+//     FILEBASEURL: "https://pre-public-1300222288.cos.ap-chengdu.myqcloud.com/activity/"+configtUrl
 // };
 
 
 //生产环境
 // const environment = {
-//     FILEBASEURL: "https://qcloud.resource.pro.hygeian.com.cn/"+configtUrl
+//     FILEBASEURL: "https://qcloud.resource.pro.hygeian.com.cn/activity/" + configtUrl
 // };
 
 export default environment;

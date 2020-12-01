@@ -99,7 +99,7 @@ class PageA extends React.Component {
 
   get() {
 
-    let url = environment.FILEBASEURL + "/config.json"
+    let url = environment.FILEBASEURL + "/config.json?d="+new Date().getTime();
     fetchService.get(
       url,
       {}).then((res) => {
@@ -157,7 +157,7 @@ class PageA extends React.Component {
       });
 
       level = this.state.config.results.level.map((item, index) => {
-        return <p key={index.toString()}>{item.points}%--{item.mean}</p>;
+        return <p key={index.toString()}>{item.points}--{item.mean}</p>;
       });
 
       description = this.state.config.results.description
@@ -189,7 +189,7 @@ class PageA extends React.Component {
           <section className={resultGo ? "result animate__animated animate__top starttop" : "result animate__animated"} style={{ "backgroundImage": "url(" + environment.FILEBASEURL + "/result_bg.png)" }}>
 
             <div className="content">
-              <p>{this.state.pointTotal}%</p>
+              <p>{this.state.pointTotal === 0 ? 0 : this.state.pointTotal + "%"}</p>
               <p>您的风险值</p>
               {level}
               <p>{description}</p>

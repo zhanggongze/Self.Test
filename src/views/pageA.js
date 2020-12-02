@@ -22,7 +22,9 @@ class PageA extends React.Component {
       activeIndex: 0,
       btntext: "下一步",
       navigatorApple: false,
-      pointTotal: 0
+      pointTotal: 0,
+      showInfor: "",
+      showMd: false
     }
 
     this.get();
@@ -40,7 +42,8 @@ class PageA extends React.Component {
     let actItem = project[this.activeIndex];
 
     if (!actItem.point && actItem.point !== 0) {
-      alert("请选择" + actItem.name + "!");
+      // alert("请选择" + actItem.name + "!");
+      this.showToast("请选择" + actItem.name + "!");
       return
     }
 
@@ -99,7 +102,7 @@ class PageA extends React.Component {
 
   get() {
 
-    let url = environment.FILEBASEURL + "/config.json?d="+new Date().getTime();
+    let url = environment.FILEBASEURL + "/config.json?d=" + new Date().getTime();
     fetchService.get(
       url,
       {}).then((res) => {
@@ -115,8 +118,22 @@ class PageA extends React.Component {
       });
   }
 
+  showToast(msg) {
+    this.setState({ showMd: true, showInfor: msg });
+    setTimeout(() => {
+      this.setState({ showMd: false });
+    }, 1800);
+  }
+
   checkReadio(item, _item) {
     item.point = _item.value;
+
+    item.items.map(o => {
+      return o.checked = false;
+    });
+    _item.checked = true;
+
+    this.setState({});
   }
 
   render() {
@@ -141,14 +158,17 @@ class PageA extends React.Component {
 
         if (this.activeIndex === index) {
 
+          let listN = ["A", "B", "C", "D", "E"];
+
           return <div className="item" key={index.toString()}>
             <p className="pName">{item.name}</p>
             <div className="radio">
               {
+
                 item.items.map((_item, _index) =>
-                  <label key={_index.toString()} onClick={() => this.checkReadio(item, _item)}>
-                    <input type="radio" name="rdSpeed" value={_item.value} />&nbsp;&nbsp;{_item.key}
-                  </label>
+                  <div key={_index.toString()} className={_item.checked ? "listN listNActive" : "listN"} onClick={() => this.checkReadio(item, _item)}>
+                    {listN[_index]}.&nbsp;{_item.key}<span>√</span>
+                  </div>
                 )
               }
             </div>
@@ -212,6 +232,14 @@ class PageA extends React.Component {
               <p>{description}</p>
             </div>
           </section>
+
+          <div className={this.state.showMd ? "msg showMsg animate__animated animate__opacity" : "msg"} >
+            <div className="content">
+              <p className="p1">{this.state.showInfor}</p>
+              {/* <div className="btn">确定</div> */}
+            </div>
+
+          </div>
         </div>
       )
     );

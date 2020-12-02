@@ -153,6 +153,20 @@ body {
   animation: fadeIn 0.2s ease;
 }
 
+@keyframes fadeOpacity {
+  0% {
+    opacity:  0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.animate__opacity {
+  animation: fadeOpacity 0.3s ease;
+}
+
 canvas{
   width: 0;
   height: 0;

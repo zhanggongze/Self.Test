@@ -8,9 +8,9 @@
 let configtUrl = window.location.search.split('=')[1]//活动配置文件地址
 
 //开发环境
-const environment = {
-    FILEBASEURL: "https://qcloud.resource.dev.hygeian.com.cn/activity/"+configtUrl
-};
+// const environment = {
+//     FILEBASEURL: "https://qcloud.resource.dev.hygeian.com.cn/activity/"+configtUrl
+// };
 
 //预发布环境
 // const environment = {
@@ -19,8 +19,8 @@ const environment = {
 
 
 //生产环境
-// const environment = {
-//     FILEBASEURL: "https://qcloud.resource.pro.hygeian.com.cn/activity/" + configtUrl
-// };
+const environment = {
+    FILEBASEURL: "https://qcloud.resource.pro.hygeian.com.cn/activity/" + configtUrl
+};
 
 export default environment;
